@@ -5,8 +5,9 @@ Conteúdo pronto para virar o repositório `curitiba-fatal-crashes` no GitHub Pa
 
 | Arquivo | URL esperada |
 |---|---|
-| `index.html` | https://avnergomes.github.io/curitiba-fatal-crashes/ (mapa 3D, 1 boneco = 1 sinistro fatal) |
-| `relatorio.html` | .../relatorio.html (reportagem de dados, PT) |
+| `index.html` | https://avnergomes.github.io/curitiba-fatal-crashes/ (relatório trilíngue PT/EN/ES, hash #pt #en #es) |
+| `mapa3d.html` | .../mapa3d.html (mapa 3D trilíngue, 1 boneco = 1 sinistro fatal) |
+| `relatorio.html` | redirect de compatibilidade para index.html#pt |
 | `dashboard.html` | .../dashboard.html (dashboard exploratório) |
 
 ## Publicar
@@ -21,8 +22,9 @@ gh api -X POST repos/avnergomes/curitiba-fatal-crashes/pages -f "source[branch]=
 Regenerar após mudanças nos dados/templates (na pasta do projeto):
 
 ```bash
-py -3 build2.py          # relatorio_trecho_mais_perigoso.html
-py -3 build_map3d.py     # mapa3d_curitiba.html + copia tudo para site/
+py -3 build_report.py    # relatório trilíngue -> site/index.html
+py -3 build2.py          # relatorio_trecho_mais_perigoso.html (legado PT)
+py -3 build_map3d.py     # mapa 3D -> site/mapa3d.html + dashboard
 ```
 
 Fonte: IPPUC, painel "Acidente de Trânsito" (BPTRAN/SMDT), sinistros fatais 2010–2024.
