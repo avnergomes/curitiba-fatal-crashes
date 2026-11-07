@@ -114,7 +114,7 @@ pt:{
   chips:['Todos','Atropelamentos','Colisões','Outros'],
   fig:'Boneco',
   hint:'Arraste para mover · botão direito (ou dois dedos) para girar e inclinar · passe o mouse numa pilha para ver detalhes. Sinistros agrupados em células de ~165 m; cada pilha é uma célula.',
-  credits:'Dados: IPPUC / BPTRAN–SMDT (sinistros fatais, 2010–2024). Basemap © OpenStreetMap, © CARTO. MapLibre GL + deck.gl. Análise: <a href="https://avnergomes.github.io/portfolio/" target="_blank" rel="noopener">Avner Gomes</a> · <a href="index.html#pt">relatório</a> · <a href="dashboard.html">dashboard</a>',
+  credits:'Dados: IPPUC / BPTRAN–SMDT (sinistros fatais, 2010–2024). Basemap OpenFreeMap, © OpenStreetMap. MapLibre GL + deck.gl. Análise: <a href="https://avnergomes.github.io/portfolio/" target="_blank" rel="noopener">Avner Gomes</a> · <a href="index.html#pt">relatório</a> · <a href="dashboard.html">dashboard</a>',
   cats:['atropelamentos','colisões','outros sinistros fatais'],
   tip:(n)=>`<b>${n} sinistro${n>1?'s':''} fatal${n>1?'is':''}</b> nesta célula de ~165 m (2010–2024)`
 },
@@ -125,7 +125,7 @@ en:{
   chips:['All','Pedestrians struck','Collisions','Other'],
   fig:'Figure',
   hint:'Drag to pan · right-drag (or two fingers) to rotate and tilt · hover a stack for details. Crashes are grouped in ~165 m cells; each stack is one cell.',
-  credits:'Data: IPPUC / BPTRAN–SMDT (fatal crashes, 2010–2024). Basemap © OpenStreetMap contributors, © CARTO. MapLibre GL + deck.gl. Analysis: <a href="https://avnergomes.github.io/portfolio/" target="_blank" rel="noopener">Avner Gomes</a> · <a href="index.html#en">report</a> · <a href="dashboard.html">dashboard</a>',
+  credits:'Data: IPPUC / BPTRAN–SMDT (fatal crashes, 2010–2024). Basemap OpenFreeMap, © OpenStreetMap contributors. MapLibre GL + deck.gl. Analysis: <a href="https://avnergomes.github.io/portfolio/" target="_blank" rel="noopener">Avner Gomes</a> · <a href="index.html#en">report</a> · <a href="dashboard.html">dashboard</a>',
   cats:['pedestrians struck','collisions','other fatal crashes'],
   tip:(n)=>`<b>${n} fatal crash${n>1?'es':''}</b> in this ~165 m cell (2010–2024)`
 },
@@ -136,7 +136,7 @@ es:{
   chips:['Todos','Atropellos','Colisiones','Otros'],
   fig:'Figura',
   hint:'Arrastre para mover · botón derecho (o dos dedos) para girar e inclinar · pase el cursor sobre una pila para ver detalles. Siniestros agrupados en celdas de ~165 m; cada pila es una celda.',
-  credits:'Datos: IPPUC / BPTRAN–SMDT (siniestros fatales, 2010–2024). Mapa base © OpenStreetMap, © CARTO. MapLibre GL + deck.gl. Análisis: <a href="https://avnergomes.github.io/portfolio/" target="_blank" rel="noopener">Avner Gomes</a> · <a href="index.html#es">informe</a> · <a href="dashboard.html">dashboard</a>',
+  credits:'Datos: IPPUC / BPTRAN–SMDT (siniestros fatales, 2010–2024). Mapa base OpenFreeMap, © OpenStreetMap. MapLibre GL + deck.gl. Análisis: <a href="https://avnergomes.github.io/portfolio/" target="_blank" rel="noopener">Avner Gomes</a> · <a href="index.html#es">informe</a> · <a href="dashboard.html">dashboard</a>',
   cats:['atropellos','colisiones','otros siniestros fatales'],
   tip:(n)=>`<b>${n} siniestro${n>1?'s':''} fatal${n>1?'es':''}</b> en esta celda de ~165 m (2010–2024)`
 }};
@@ -235,7 +235,7 @@ const overlay = new deck.MapboxOverlay({
 
 const map = new maplibregl.Map({
   container: 'map',
-  style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+  style: 'https://tiles.openfreemap.org/styles/positron',
   center: [-49.2715, -25.4485],
   zoom: 12.0,
   pitch: 55,
